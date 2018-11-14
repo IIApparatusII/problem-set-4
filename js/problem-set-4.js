@@ -49,7 +49,7 @@ function celsius() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-  var fahr = ((cels * 9/5) + 32).toFixed(2);
+  let fahr = ((cels * 9/5) + 32).toFixed(2);
   var div=document.getElementById("output3");
   div.innerHTML = cels + " degrees Celsius equals " + fahr + " degrees Fahrenheit.";
   ////////////////////////// DO NOT MODIFY
@@ -71,7 +71,7 @@ function fahrenheit() {
   // (inclusive), and rounds this value to 2 decimal places.
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  var cels = ((fahr - 32) * 5/9).toFixed(2);
+  let cels = ((fahr - 32) * 5/9).toFixed(2);
   var div=document.getElementById("output4");
   div.innerHTML = fahr + " degrees Fahrenheit equals " + cels + " degrees Celsius.";
   ///////////////////////////// DO NOT MODIFY
@@ -97,7 +97,15 @@ function inches() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 5 CODE HERE
+  let miles = Math.floor(inches / 63360);
+  inches = inches % 63360;
+  let yards = Math.floor(inches / 36);
+  inches = inches % 36;
+  let feet = Math.floor(inches / 12);
+  inches = inches % 12;
 
+  var div = document.getElementById("output5");
+  div.innerHTML = (`Miles: ${miles}</br>Yards: ${yards}</br>Feet: ${feet}</br>Inches: ${inches}`)
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -121,7 +129,13 @@ function centimeters() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 6 CODE HERE
+  let kilometers = Math.floor(centimeters / 100000);
+  centimeters = centimeters % 100000;
+  let meters = Math.floor(centimeters / 100);
+  centimeters = centimeters % 100;
 
+  var div = document.getElementById("output6");
+  div.innerHTML = (`Kilometers: ${kilometers}</br>Meters: ${meters}</br>Centimeters: ${centimeters}`);
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -145,7 +159,17 @@ function fluidOunces() {
   /////////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 7 CODE HERE
+  let gallons = Math.floor(fluidOunces / 128);
+  fluidOunces = fluidOunces % 128;
+  let quarts = Math.floor(fluidOunces / 32);
+  fluidOunces = fluidOunces % 32;
+  let pints = Math.floor(fluidOunces / 16);
+  fluidOunces = fluidOunces % 16;
+  let cups = Math.floor(fluidOunces / 8);
+  fluidOunces = fluidOunces % 8;
 
+  var div = document.getElementById("output7");
+  div.innerHTML = (`Gallons: ${gallons}</br>Quarts: ${quarts}</br>Pints: ${pints}</br>Cups: ${cups}</br>Fluid Ounces: ${fluidOunces}`);
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
@@ -169,7 +193,7 @@ function ounces() {
   ////////////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 8 CODE HERE
-
+ let tons = Math.floor(ounces / 32000);
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
